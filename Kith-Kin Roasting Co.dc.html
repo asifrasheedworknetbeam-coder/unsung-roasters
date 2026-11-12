@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#27323f;font-family:'Inter',sans-serif;color:#fff}*{box-sizing:border-box}a{color:#e8d5b0;text-decoration:none}a:hover{color:#fff}img{display:block;max-width:100%}input::placeholder{color:#6b7280}</style>
+<style>@media (max-width:768px){[data-m="search"]{display:none!important}[data-m="hero-row"]{flex-direction:column;justify-content:center!important;gap:28px!important}[data-m="track"]{grid-auto-columns:82%!important;gap:16px!important}[data-m="arrow"]{display:none!important}[data-m="gallery"]{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:150px!important}[data-m="story-line"]{display:block!important}[data-m="hero-row"]>div:first-child{margin:0 auto!important}[data-m="goat"]{width:150px!important}[data-m="ftr-row"]{justify-content:center!important}[data-m="copy"]{text-align:center!important}[data-m="ftr-bottom"]{justify-content:center!important;padding-bottom:96px!important}[data-m="story-img"]{justify-self:center!important;margin-right:0!important;width:min(88%,420px)!important}h1,h2{text-wrap:balance}}@media (max-width:480px){[data-m="gallery"]{grid-auto-rows:120px!important}}</style>
+<script>(function(){function fit(){document.querySelectorAll('[data-m="hero-h1"]').forEach(function(h){h.style.width='';var r=document.createRange();r.selectNodeContents(h);var w=0;Array.prototype.forEach.call(r.getClientRects(),function(x){w=Math.max(w,x.width)});if(w)h.style.width=Math.ceil(w+2)+'px';});}var n=0,iv=setInterval(function(){fit();if(++n>20)clearInterval(iv)},250);window.addEventListener('resize',fit);if(document.fonts)document.fonts.ready.then(fit);})();</script>
+<script>(function(){function chk(){document.querySelectorAll('[data-screen-label="Gallery"]').forEach(function(s){var bs=s.querySelectorAll('[data-m="gallery"] button');if(!bs.length)return;var v=0;bs.forEach(function(b){if(b.style.display!=='none')v++;});s.style.display=v?'':'none';});}window.addEventListener('error',function(e){var i=e.target;if(i&&i.tagName==='IMG'){var b=i.closest('button');if(b){b.style.display='none';chk();}}},true);setTimeout(chk,3000);})();</script>
+</helmet>
+<div style="display:flex;flex-direction:column;overflow-x:hidden">
+
+<section data-screen-label="Hero" style="position:relative;min-height:clamp(520px,72vh,680px);background:#34455a url('assets/kith/roasting.jpg') center/cover no-repeat;display:flex;flex-direction:column">
+  <div style="position:absolute;inset:0;background:rgba(44,59,79,.78)"></div>
+  <div style="position:absolute;left:0;right:0;bottom:0;height:55%;background:linear-gradient(to bottom,rgba(58,74,92,0) 0%,rgba(58,74,92,.75) 60%,#3a4a5c 100%);pointer-events:none"></div>
+  <header style="position:relative;max-width:1320px;width:100%;margin:0 auto;padding:clamp(16px,2.4vw,28px) clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+    <a href="https://unsungroasters.com/"><img src="assets/unsung-logo.png" alt="Unsung Coffee Roasters" style="height:60px;width:auto"></a>
+    <div style="display:flex;align-items:center;gap:28px">
+      <label data-m="search" style="display:flex;align-items:center;gap:10px;width:340px;max-width:60vw;height:46px;padding:0 18px;border:1.5px solid #e8d5b0;border-radius:12px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+        <input placeholder="Search Our Coffee..." style="flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;font:400 14px 'Inter',sans-serif">
+      </label>
+      <img src="assets/header-icons.png" alt="Menu, account, cart" style="height:28px;width:auto">
+    </div>
+  </header>
+  <div style="position:relative;flex:1;max-width:1320px;width:100%;margin:0 auto;padding:clamp(24px,4vw,40px) clamp(20px,4vw,40px) clamp(64px,8vw,96px);display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap" data-m="hero-row">
+    <div style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;align-self:center;margin-right:auto">
+      <p style="margin:0;font:500 clamp(18px,1.4vw + 8px,26px) 'Montserrat',sans-serif;letter-spacing:.04em;text-transform:uppercase;color:#fff">Meet Our Roaster</p>
+      <h1 data-m="hero-h1" style="margin:0;max-width:16ch;font:700 clamp(40px,4.6vw,60px)/1.08 'Montserrat',sans-serif;letter-spacing:-.01em;color:#fff;text-wrap:balance">Kith+Kin Roasting Co.</h1>
+    </div>
+    <div style="width:clamp(180px,20vw,270px);height:clamp(180px,20vw,270px);background:#fff;border-radius:24px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.2)">
+      <img src="assets/kith/mexico.jpg" alt="Kith + Kin Roasting Co. hexagon logo" style="background:repeating-linear-gradient(135deg,#e9e1d3 0 10px,#e1d7c6 10px 20px);width:80%;height:80%;object-fit:contain">
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Our Story" style="position:relative;background:#3a4a5c;overflow:hidden">
+  <div data-m="story-line" style="display:none;position:relative;z-index:1;height:1px;margin:0 20px;background:rgba(232,213,176,.4)"></div>
+  <img src="assets/leaves.png" alt="" style="position:absolute;top:0;left:0;width:100%;height:auto;opacity:.22;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);">
+  <div style="position:relative;max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(48px,6vw,96px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:62ch">
+      <h2 style="margin:0;font:600 clamp(32px,2.6vw + 14px,48px)/1.08 'Montserrat',sans-serif;letter-spacing:-.01em">Our Story</h2>
+      
+      <div style="display:flex;flex-direction:column;gap:16px;font-size:clamp(16px,0.35vw + 14.6px,18px);line-height:1.65;color:#fff">
+        <p style="margin:0"><strong>Kith+Kin Roasting Co.</strong> has been a part of the coffee industry since 2005. We’ve had our share of great years and challenging ones, weathered the storm of COVID shutdowns, and overcome countless obstacles along the way. Through it all, our unwavering commitment to quality and our passion for roasting have kept us going—earning us a loyal following that extends well beyond our small hometown of Artesia, NM.</p>
+        <p style="margin:0">We carefully monitor every roast, taking precise readings to ensure consistency and uphold our strict quality standards. From California to New York, our coffees reach customers who truly appreciate the care and craftsmanship that goes into every batch. Even with local roasters in their own cities, they continue to choose us—something that speaks volumes about the quality of our beans.</p>
+        <p style="margin:0">Try Kith+Kin Roasting Co. and experience for yourself why our customers keep coming back for more.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px;padding-top:20px;border-top:1px solid rgba(232,213,176,.35)">
+        <p style="margin:0;font:600 18px 'Montserrat',sans-serif">Kith+Kin Roasting Co.</p>
+        <p style="margin:0;font-size:15px;line-height:1.6;color:#d6dbe1">105 N. 5th St. Artesia, NM 88210</p>
+      </div>
+    </div>
+    <div data-m="story-img" style="position:relative;justify-self:end;width:min(100%,520px);aspect-ratio:651/680;margin-right:16px">
+      <div style="position:absolute;inset:0;background:#e2cfa9;border-radius:28px;transform:rotate(4deg) translate(14px,8px)"></div>
+      <img src="assets/kith/brewing.jpg" alt="Person brewing coffee" style="background:repeating-linear-gradient(135deg,#e9e1d3 0 10px,#e1d7c6 10px 20px);position:relative;width:100%;height:100%;object-fit:cover;border-radius:28px;transform:rotate(-2deg);box-shadow:0 24px 50px rgba(0,0,0,.25)">
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="From Jahva House to Kith+Kin: A Legacy of Friends, Family, and Fresh Beginnings" style="position:relative;background:#f3ecdf;overflow:hidden">
+  <img src="assets/plant-left.png" alt="" style="position:absolute;left:-40px;bottom:0;width:520px;opacity:.12;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);">
+  <img src="assets/plant-right.png" alt="" style="position:absolute;right:-40px;top:0;width:420px;opacity:.12;transform:rotate(180deg);pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);">
+  <div style="position:relative;max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(48px,6vw,96px);align-items:center">
+    <div style="width:min(100%,460px);justify-self:center;aspect-ratio:1;border-radius:50%;padding:10px;background:#fff;box-shadow:0 20px 50px rgba(44,59,79,.15)">
+      <img src="assets/kith/hardhats.webp" alt="Hands holding a de-pulped red coffee cherry with two green beans inside" style="background:repeating-linear-gradient(135deg,#e9e1d3 0 10px,#e1d7c6 10px 20px);width:100%;height:100%;object-fit:cover;border-radius:50%">
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:62ch;color:#2c3b4f">
+      <h2 style="margin:0;font:600 clamp(32px,2.6vw + 14px,48px)/1.08 'Montserrat',sans-serif;letter-spacing:-.01em">From Jahva House to Kith+Kin: A Legacy of Friends, Family, and Fresh Beginnings</h2>
+      <div style="display:flex;flex-direction:column;gap:16px;font-size:clamp(16px,0.35vw + 14.6px,18px);line-height:1.65;color:#3b4654">
+        <div style="display:flex;flex-direction:column;gap:16px"><p style="margin:0">At 7am on Monday, November 21, 2005, The Jahva House turned on its open sign for the first time. Despite it being a soft opening, we had people waiting at the door with their faces pressed on the window…and they still are. The Jahva House has been a much-needed social center for Artesia since day one.</p><p style="margin:0">A lot has happened since then, good and bad. We’ve seen some things. And then, 13 years later, we saw a big change: the addition of an in-house coffee roastery, bakery and meeting area. With that came our new identity, Kith+Kin Roasting Co.</p></div>
+        <div style="display:flex;flex-direction:column;gap:16px"><p style="margin:0">‘Kith + Kin’ is an Old English phrase meaning acquaintances and relatives. Our friends and family. This is the foundation of our business. We wouldn’t exist without it.</p><p style="margin:0">From my family who put up the building, my friends who volunteered during construction, relatives who helped us through some tough times, and now the long-time friends of The Jahva House who have assisted us in making this fresh start, we wouldn’t still be here without any of them. So, this new beginning and fresh start is dedicated to our friends and family, our Kith and Kin.</p></div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Products" style="position:relative;background:#27323f;overflow:hidden">
+  <img src="assets/coffee-plant-mask.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);">
+  <div style="position:relative;max-width:1400px;margin:0 auto;padding:clamp(72px,8vw,110px) clamp(16px,3vw,40px) clamp(64px,7vw,100px);display:flex;flex-direction:column;align-items:center;gap:clamp(40px,4vw,64px)">
+    <h2 style="margin:0;max-width:640px;text-align:center;color:#fff;font:700 clamp(32px,3.4vw,48px)/1.2 'Montserrat',sans-serif">Explore Products From This Roaster</h2>
+    <div style="position:relative;width:100%;display:flex;align-items:center;gap:clamp(4px,1.5vw,24px)">
+      <button data-m="arrow" onClick="{{ prev }}" aria-label="Previous" style="flex:none;width:44px;height:56px;background:transparent;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center"><span style="width:20px;height:20px;border-left:2px solid #e8d5b0;border-bottom:2px solid #e8d5b0;transform:translateX(4px) rotate(45deg)"></span></button>
+      <div data-m="track" ref="{{ trackRef }}" style="flex:1;min-width:0;display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px)/3);gap:24px;padding:6px 0 10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;align-items:stretch">
+        <sc-for list="{{ products }}" as="p" hint-placeholder-count="4">
+          <a href="{{ p.url }}" style="scroll-snap-align:start;min-width:0;background:#fff;border-radius:28px 28px 0 0;padding:22px 20px 0;display:flex;flex-direction:column;align-items:center;gap:14px;color:#3b4654;text-align:center" style-hover="transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.3)">
+            <h3 style="margin:0;min-height:2.5em;display:flex;align-items:center;justify-content:center;font:500 clamp(18px,1.45vw,22px)/1.25 'Montserrat',sans-serif;color:#3b4654">{{ p.name }}</h3>
+            <div style="width:min(80%,250px);aspect-ratio:4/5;border-radius:50%;border:4px solid #e8d5b0;overflow:hidden;background:repeating-linear-gradient(135deg,#e9e1d3 0 10px,#e1d7c6 10px 20px)">
+              <sc-if value="{{ p.img }}" hint-placeholder-val="{{ true }}"><img src="{{ p.img }}" alt="{{ p.name }}" style="width:100%;height:100%;object-fit:cover"></sc-if>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:6px;flex:1">
+              <sc-if value="{{ p.desc }}" hint-placeholder-val="{{ false }}"><p style="margin:0;max-width:16ch;font:500 clamp(15px,1.15vw,17px)/1.45 'Montserrat',sans-serif;color:#3b4654">{{ p.desc }}</p></sc-if>
+              <sc-if value="{{ p.notes }}" hint-placeholder-val="{{ false }}"><p style="margin:0;font:400 14px/1.4 'Montserrat',sans-serif;color:#6b7280">{{ p.notes }}</p></sc-if>
+            </div>
+            <span style="width:100%;padding:12px 0 14px;border-top:1px solid #ddd;font:500 15px 'Montserrat',sans-serif;color:#3b4654">{{ p.cta }}</span>
+          </a>
+        </sc-for>
+      </div>
+      <button data-m="arrow" onClick="{{ next }}" aria-label="Next" style="flex:none;width:44px;height:56px;background:transparent;border:0;cursor:pointer;display:flex;align-items:center;justify-content:center"><span style="width:20px;height:20px;border-right:2px solid #e8d5b0;border-top:2px solid #e8d5b0;transform:translateX(-4px) rotate(45deg)"></span></button>
+    </div>
+    <a href="https://unsungroasters.com/shop/" style="padding:14px 34px;background:#fff;color:#3b4654;border:3px solid #e8d5b0;border-radius:999px;font:400 16px 'Montserrat',sans-serif" style-hover="background:#e8d5b0">View More</a>
+  </div>
+</section>
+
+<section data-screen-label="Gallery" style="position:relative;background:#f3ecdf;overflow:hidden">
+  <img src="assets/coffee-plant-mask.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.12;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);">
+  <div style="position:relative;max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,40px);display:flex;flex-direction:column;align-items:center;gap:clamp(32px,4vw,48px)">
+    <div data-m="gallery" style="width:100%;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(120px,16vw,240px);gap:clamp(6px,0.7vw,10px)">
+      <div style="background:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(44,59,79,.06)"></div>
+      <div style="background:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(44,59,79,.06)"></div>
+      <div style="background:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(44,59,79,.06)"></div>
+      <div style="background:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(44,59,79,.06)"></div>
+      <div style="background:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(44,59,79,.06)"></div>
+      <div style="background:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(44,59,79,.06)"></div>
+      <div style="background:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(44,59,79,.06)"></div>
+      <div style="background:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(44,59,79,.06)"></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Discover More Unsung Roasters." style="position:relative;background:#3a4a5c;overflow:hidden">
+  
+  <div style="position:relative;max-width:1320px;margin:0 auto;padding:clamp(64px,8vw,104px) clamp(20px,4vw,40px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(48px,6vw,96px);align-items:center">
+    <div style="display:flex;flex-direction:column;gap:20px;max-width:62ch;color:#fff">
+      <h2 style="margin:0;font:600 clamp(32px,2.6vw + 14px,48px)/1.08 'Montserrat',sans-serif;letter-spacing:-.01em">Discover More Unsung Roasters.</h2>
+      <div style="display:flex;flex-direction:column;gap:16px;font-size:clamp(16px,0.35vw + 14.6px,18px);line-height:1.65;color:#fff">
+        <p style="margin:0">Explore the hidden gems of the coffee world with our curated selection of Unsung Roasters. These small-batch coffee roasters craft exceptional brews that deserve to be discovered. Dive into their stories, savor their unique blends, and uncover flavors that will transform your coffee experience!</p>
+      </div>
+      <a href="https://unsungroasters.com/product-category/merch/" style="align-self:flex-start;padding:14px 40px;background:#fff;color:#2c3b4f;border-radius:999px;font:500 15px 'Montserrat',sans-serif" style-hover="background:#e8d5b0;color:#2c3b4f">Uncover More</a>
+    </div>
+    <div style="width:min(100%,460px);justify-self:center;aspect-ratio:1;border-radius:50%;padding:10px;background:#fff;box-shadow:0 20px 50px rgba(44,59,79,.15)">
+      <img src="assets/kith/plantation.jpg" alt="Man sitting inside Bare Roots Coffee behind window logo" style="background:repeating-linear-gradient(135deg,#e9e1d3 0 10px,#e1d7c6 10px 20px);width:100%;height:100%;object-fit:cover;border-radius:50%">
+    </div>
+  </div>
+</section>
+
+<footer style="position:relative;background:#27323f;overflow:hidden">
+  <img src="assets/coffee-plant-mask.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.85;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0,#000 18%,#000 82%,transparent 100%);">
+  <div style="position:relative;max-width:1300px;margin:0 auto;padding:clamp(64px,8vw,120px) clamp(20px,4vw,40px) 0;display:flex;flex-wrap:wrap;gap:40px clamp(40px,4vw,56px);align-items:center;justify-content:center" data-m="ftr-row">
+    <img data-m="goat" src="assets/goat.png" alt="Unsung goat logo" style="width:clamp(180px,20vw,300px);flex-shrink:0">
+    <div style="flex:1;min-width:min(100%,320px);max-width:920px;display:flex;flex-direction:column;gap:28px">
+      <img src="assets/unsung-logo.png" alt="Unsung Coffee Roasters" style="width:clamp(220px,24vw,340px)">
+      <div style="display:flex;gap:40px clamp(48px,8vw,200px);flex-wrap:wrap;align-items:flex-start">
+        <div style="display:flex;flex-direction:column;gap:22px">
+          <h3 style="margin:0;color:#fff;font:700 17px 'Montserrat',sans-serif;letter-spacing:.2em;text-transform:uppercase">Site Map</h3>
+          <nav style="display:flex;flex-direction:column;gap:14px;font:400 16px 'Montserrat',sans-serif">
+            <a href="#" style="color:#fff;padding:2px 0 2px 11px;border-left:2px solid transparent" style-hover="color:#e8d5b0;border-left-color:#e8d5b0">Home</a>
+            <a href="#" style="color:#fff;padding:2px 0 2px 11px;border-left:2px solid transparent" style-hover="color:#e8d5b0;border-left-color:#e8d5b0">About Us</a>
+            <a href="#" style="color:#e8d5b0;padding:2px 0 2px 11px;border-left:2px solid #e8d5b0">Our Roasters</a>
+            <a href="#" style="color:#fff;padding:2px 0 2px 11px;border-left:2px solid transparent" style-hover="color:#e8d5b0;border-left-color:#e8d5b0">Shop</a>
+            <a href="#" style="color:#fff;padding:2px 0 2px 11px;border-left:2px solid transparent" style-hover="color:#e8d5b0;border-left-color:#e8d5b0">Partner</a>
+            <a href="#" style="color:#fff;padding:2px 0 2px 11px;border-left:2px solid transparent" style-hover="color:#e8d5b0;border-left-color:#e8d5b0">FAQ</a>
+            <a href="#" style="color:#fff;padding:2px 0 2px 11px;border-left:2px solid transparent" style-hover="color:#e8d5b0;border-left-color:#e8d5b0">Contact</a>
+          </nav>
+        </div>
+        <div style="flex:1;min-width:min(100%,300px);display:flex;flex-direction:column;gap:44px;padding-top:2px">
+          <h3 style="margin:0;color:#fff;font:700 clamp(20px,2vw,25px) 'Montserrat',sans-serif">Subscribe to our newsletter</h3>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <input type="email" placeholder="Insert your email" style="flex:1.6;min-width:200px;height:54px;padding:0 20px;border-radius:999px;border:3px solid #e8d5b0;background:#fff;font:400 16px 'Montserrat',sans-serif;color:#27323f;outline:0;box-shadow:0 2px 6px rgba(0,0,0,.25)">
+            <button style="flex:1;min-width:180px;height:60px;padding:0 32px;border-radius:999px;border:2px solid #e8d5b0;background:transparent;color:#fff;font:500 16px 'Montserrat',sans-serif;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25)" style-hover="background:#e8d5b0;color:#27323f">Subscribe now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="position:relative;max-width:1300px;margin:0 auto;padding:40px clamp(20px,4vw,40px) clamp(64px,7vw,110px);display:flex;justify-content:flex-end" data-m="ftr-bottom">
+    <p data-m="copy" style="margin:0;max-width:920px;font:400 15px 'Montserrat',sans-serif;color:#fff;text-align:right">© Unsung Roasters 2026 | All rights reserved | Website &amp; Logo Designed by Monsoon</p>
+  </div>
+  <a href="#" aria-label="Back to top" style="position:absolute;right:clamp(16px,4vw,72px);bottom:26px;width:44px;height:44px;background:#000;border-radius:4px;display:flex;align-items:center;justify-content:center" style-hover="background:#e8d5b0">
+    <span style="width:9px;height:9px;border-left:2px solid #fff;border-top:2px solid #fff;transform:translateY(2px) rotate(45deg)"></span>
+  </a>
+</footer>
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ lbClose }}" style="position:fixed;inset:0;z-index:1000;background:rgba(20,27,36,.95);display:flex;align-items:center;justify-content:center;padding:clamp(56px,6vw,88px) clamp(16px,8vw,120px)">
+    <img src="{{ lbSrc }}" alt="Kith+Kin Roasting Co." onClick="{{ stop }}" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5)">
+    <button onClick="{{ lbPrev }}" aria-label="Previous image" style="position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(232,213,176,.6);background:rgba(39,50,63,.6);color:#fff;font-size:30px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;left:clamp(8px,2vw,32px)" style-hover="background:#e8d5b0;color:#27323f">‹</button>
+    <button onClick="{{ lbNext }}" aria-label="Next image" style="position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1.5px solid rgba(232,213,176,.6);background:rgba(39,50,63,.6);color:#fff;font-size:30px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;right:clamp(8px,2vw,32px)" style-hover="background:#e8d5b0;color:#27323f">›</button>
+    <button onClick="{{ lbClose }}" aria-label="Close" style="position:absolute;top:clamp(12px,2vw,24px);right:clamp(12px,2vw,24px);width:44px;height:44px;border-radius:50%;border:0;background:transparent;color:#fff;font-size:32px;line-height:1;cursor:pointer" style-hover="color:#e8d5b0">×</button>
+    <p style="position:absolute;bottom:clamp(16px,2vw,28px);left:0;right:0;margin:0;text-align:center;font:500 14px 'Montserrat',sans-serif;letter-spacing:.08em;color:#e8d5b0">{{ lbCounter }}</p>
+  </div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { galShown: 9, lb: null };
+  _gal = [];
+  onKey = (e) => {
+    if (this.state.lb === null) return;
+    if (e.key === 'Escape') this.setState({ lb: null });
+    if (e.key === 'ArrowRight') this.step(1);
+    if (e.key === 'ArrowLeft') this.step(-1);
+  };
+  componentDidMount() { window.addEventListener('keydown', this.onKey); }
+  componentWillUnmount() { window.removeEventListener('keydown', this.onKey); }
+  step(d) { const n = this._gal.length; if (n) this.setState(s => ({ lb: (s.lb + d + n) % n })); }
+  galVals(all) {
+    this._gal = all || [];
+    const { galShown, lb } = this.state;
+    const halt = f => e => { e.stopPropagation(); f(); };
+    return {
+      galItems: this._gal.slice(0, galShown).map((src, i) => ({ src, c: i % 9 === 1 ? 2 : 1, r: (i % 9 === 2 || i % 9 === 5) ? 2 : 1, open: () => this.setState({ lb: i }) })),
+      galHasMore: galShown < this._gal.length,
+      loadMore: () => this.setState(s => ({ galShown: s.galShown + 9 })),
+      lbOpen: lb !== null,
+      lbSrc: lb !== null ? this._gal[lb] : '',
+      lbCounter: lb !== null ? (lb + 1) + ' / ' + this._gal.length : '',
+      lbPrev: halt(() => this.step(-1)),
+      lbNext: halt(() => this.step(1)),
+      lbClose: () => this.setState({ lb: null }),
+      stop: e => e.stopPropagation()
+    };
+  }
+  renderVals() { const r = this.baseVals(); return Object.assign(r, this.galVals(r.gallery)); }
+  trackRef = React.createRef();
+  galRef = React.createRef();
+  scroll(ref, dir) { const t = ref.current; if (t) t.scrollBy({ left: dir * ((t.clientWidth + 24) / 3), behavior: 'smooth' }); }
+  baseVals() {
+    const U = 'https://unsungroasters.com/wp-content/uploads/';
+    return {
+      trackRef: this.trackRef, galRef: this.galRef,
+      prev: () => this.scroll(this.trackRef, -1), next: () => this.scroll(this.trackRef, 1),
+      gprev: () => this.scroll(this.galRef, -1), gnext: () => this.scroll(this.galRef, 1),
+      nav: [['Home',''],['About Us','about-unsung-roasters/'],['Our Roasters','our-roasters/'],['Shop','shop/'],['Partner','partner/'],['FAQ','faq/'],['Contact','contact/']].map(([label, s]) => ({ label, url: 'https://unsungroasters.com/' + s })),
+      products: [
+        {
+          "name": "Trifecta Espresso Blend by Kith+Kin",
+          "url": "https://unsungroasters.com/product/trifecta-espresso-blend/",
+          "img": "assets/kith/trifecta.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "32 Titles Blend by Kith+Kin",
+          "url": "https://unsungroasters.com/product/32-titles-blend-medium-roast/",
+          "img": "assets/kith/32-titles.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Kenya Single Origin by Kith+Kin",
+          "url": "https://unsungroasters.com/product/kenya-single-origin-medium-roast/",
+          "img": "assets/kith/kenya.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Mexico Single Origin by Kith+Kin",
+          "url": "https://unsungroasters.com/product/mexico-single-origin-dark-roast/",
+          "img": "assets/kith/mexico.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Coolio Iglesias Blend by Kith+Kin",
+          "url": "https://unsungroasters.com/product/coolio-iglesias-blend/",
+          "img": "assets/kith/coolio.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Ethiopia Single Origin by Kith+Kin",
+          "url": "https://unsungroasters.com/product/ethiopia-single-origin-light-roast/",
+          "img": "assets/kith/ethiopia.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Papua New Guinea Korofeigu by Kith+Kin",
+          "url": "https://unsungroasters.com/product/papua-new-guinea-korofeigu-organic-single-origin-medium-roast/",
+          "img": "assets/kith/png.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Colombia Single Origin by Kith+Kin",
+          "url": "https://unsungroasters.com/product/colombia-single-origin-medium-roast/",
+          "img": "assets/kith/colombia.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Black Gold Blend by Kith+Kin",
+          "url": "https://unsungroasters.com/product/black-gold-blend-dark-roast/",
+          "img": "assets/kith/black-gold.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Costa Rica Los Santos by Kith+Kin",
+          "url": "https://unsungroasters.com/product/costa-rica-los-santos-diez-pueblos-single-origin-medium-roast/",
+          "img": "assets/kith/costa-rica.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Golden Pecan Blend by Kith+Kin",
+          "url": "https://unsungroasters.com/product/golden-pecan/",
+          "img": "assets/kith/golden-pecan.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Slow Rider Decaf Blend by Kith+Kin",
+          "url": "https://unsungroasters.com/product/slow-rider-decaf-medium-roast/",
+          "img": "assets/kith/slow-rider.jpg",
+          "cta": "Select options"
+        },
+        {
+          "name": "Brazil Single Origin by Kith+Kin",
+          "url": "https://unsungroasters.com/product/brazil-single-origin-medium-roast/",
+          "img": "assets/kith/brazil.jpg",
+          "cta": "Select options"
+        }
+      ],
+      gallery: []
+    };
+  }
+}
+</script>
+</body>
+</html>
